@@ -1,13 +1,10 @@
 package com.softwaresandbox.patternshelloworld;
 
-import com.softwaresandbox.patternshelloworld.decorator.BoldTag;
-import com.softwaresandbox.patternshelloworld.decorator.HtmlRoot;
-import com.softwaresandbox.patternshelloworld.decorator.Reverser;
-import com.softwaresandbox.patternshelloworld.decorator.TimName;
+import com.softwaresandbox.patternshelloworld.decorator.*;
 
 public class StyleFactory {
 
-    public HtmlRoot create(String style) {
+    public StringDecorator create(String style) {
         if ("bold".equals(style)) {
             return new HtmlRoot(new BoldTag(new TimName()));
         }
